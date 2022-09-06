@@ -1,0 +1,15 @@
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.csproj.AssemblyReference.cache
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.AssemblyInfoInputs.cache
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.AssemblyInfo.cs
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.csproj.CoreCompileInputs.cache
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\bin\Debug\net6.0\Labb1.exe
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\bin\Debug\net6.0\Labb1.deps.json
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\bin\Debug\net6.0\Labb1.runtimeconfig.json
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\bin\Debug\net6.0\Labb1.dll
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\bin\Debug\net6.0\Labb1.pdb
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.dll
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\refint\Labb1.dll
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.pdb
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\Labb1.genruntimeconfig.cache
+C:\Users\henri\Documents\GitHub\Labb1\Labb1\Labb1\obj\Debug\net6.0\ref\Labb1.dll
