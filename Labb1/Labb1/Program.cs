@@ -12,7 +12,7 @@ string firstString = string.Empty;
 string numberString = string.Empty; //som ska summeras och färgas
 string secondString = string.Empty;
 bool checkConv = false; //om konvertering gått igenom
-bool lastPart= false; //Om sista delen ska fyllas i
+bool lastPart = false; //Om sista delen ska fyllas i
 
 //Loop för att gå igenom alla indexering av strängen
 for (int i = 0; i < input.Length; i++)
@@ -22,18 +22,17 @@ for (int i = 0; i < input.Length; i++)
     
     for (int j = i + 1; j < input.Length; j++)
     {
-        if (!lastPart)  //
+        if (!lastPart)  //om den ska fylla på nummer sträng eller inte
         {
             numberString += input[j]; //lägger till delar till siffersträngen
         }
 
-        //Här måste den sista sträng delen göras, om vi fått ok på variabeln nedan. Placeras ovan checken nedan för att få utskriften ok.
-        if (lastPart)
+        else //Här måste den sista sträng delen göras, om vi fått ok på variabeln nedan. Placeras ovan checken nedan för att få utskriften ok.
         {
             secondString += input[j];
         }
 
-        if (input[j] == searchChar && lastPart == false) //då har nästa likadana värde hittats, inte samma som första siffran
+        if (input[j] == searchChar && lastPart == false) //då har nästa likadana värde hittats, men  letar inte efter andra delen
         {            
             checkConv = long.TryParse(numberString, out sum); //Kör try parse här om det går att konvertera texten.
 
@@ -46,7 +45,7 @@ for (int i = 0; i < input.Length; i++)
             else if (!checkConv) //Om konverteringen ej går igenom
             {
                 numberString = string.Empty;
-                //och sen börja om från början för nästa i position. i position med ett nytt sökvärde
+                //och sen börja om från början för nästa 'i'-position i första loopen.
                 break;
             }
         }
