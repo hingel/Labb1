@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Enter a string or press enter to use default string.");
+﻿Console.WriteLine("Enter a string or press enter to use default string:");
 
 string input = Console.ReadLine();
 Console.WriteLine();
