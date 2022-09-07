@@ -1,8 +1,15 @@
-﻿//Console.WriteLine("Enter input or press enter to use default string.");
+﻿Console.WriteLine("Enter a string or press enter to use default string.");
 
-//string input = Console.ReadLine();
+string input = Console.ReadLine();
+Console.WriteLine();
 
-string input = "29535123p48723487597645723645";
+if (input == "")
+{
+    input = "29535123p48723487597645723645";
+}
+
+//string input = "29535123p48723487597645723645";
+//string input = "12837123dfkdjf34239sd1872";
 char searchChar;
 
 long totalSum = 0;
@@ -22,31 +29,30 @@ for (int i = 0; i < input.Length; i++)
     
     for (int j = i + 1; j < input.Length; j++)
     {
-        if (!lastPart)  //om den ska fylla på nummer sträng eller inte
+        if (!lastPart)  //om den ska fylla på nummer sträng eller sista delen
         {
-            numberString += input[j]; //lägger till delar till siffersträngen
+            numberString += input[j]; 
         }
 
-        else //Här måste den sista sträng delen göras, om vi fått ok på variabeln nedan. Placeras ovan checken nedan för att få utskriften ok.
+        else //Här summeras sista delen av strängen. Placeras ovan för att sumeringen ska ske efter nummersträngen är ok
         {
             secondString += input[j];
         }
 
-        if (input[j] == searchChar && lastPart == false) //då har nästa likadana värde hittats, men  letar inte efter andra delen
+        if (input[j] == searchChar && lastPart == false) //då har nästa likadana värde hittats, men letar inte efter andra delen
         {            
             checkConv = long.TryParse(numberString, out sum); //Kör try parse här om det går att konvertera texten.
 
             if (checkConv) //om konvertering gick igenom
             {
-                totalSum += sum; //lägg sum till totalsumman
+                totalSum += sum;
                 lastPart = true; //Då börja på sista strängen
             }
 
             else if (!checkConv) //Om konverteringen ej går igenom
             {
                 numberString = string.Empty;
-                //och sen börja om från början för nästa 'i'-position i första loopen.
-                break;
+                break; //och sen börja om från början för nästa 'i'-position i yttersta loopen.
             }
         }
     }
@@ -54,11 +60,17 @@ for (int i = 0; i < input.Length; i++)
     if (checkConv) //Om konvertering blivit lyckad vill vi skriva ut.
     {
         lastPart = false;
-        //Här nere ska strängen skrivas ut
-        Console.WriteLine("{0},{1},{2} i: {3} searchChar: {4}", firstString, numberString, secondString, i, searchChar);
+        Console.Write($"{firstString}");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write($"{numberString}");
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.Write($"{secondString}");
+        Console.WriteLine();
+
         numberString = string.Empty;
         secondString = string.Empty;
         checkConv = false;
+
         firstString += input[i]; //Lägga till sist för att inte komma med i utskriften, men ska alltid summeras.
     }
 
@@ -67,8 +79,8 @@ for (int i = 0; i < input.Length; i++)
         numberString = string.Empty;
         secondString = string.Empty;
         lastPart = false;
-        firstString += input[i]; //summera ihop strängen.
+        firstString += input[i]; //summera ihop första strängen.
     }
 }
 
-Console.WriteLine("Summan är: " + totalSum);
+Console.WriteLine("Total sum is: " + totalSum);
