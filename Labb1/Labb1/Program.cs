@@ -8,40 +8,33 @@ if (input == "")
     input = "29535123p48723487597645723645";
 }
 
-//string input = "29535123p48723487597645723645";
-//string input = "12837123dfkdjf34239sd1872";
-char searchChar;
-
 long totalSum = 0;
 long sum = 0;
-
 string firstString = string.Empty;
 string numberString = string.Empty; //som ska summeras och färgas
 string secondString = string.Empty;
 bool checkConv = false; //om konvertering gått igenom
 bool lastPart = false; //Om sista delen ska fyllas i
 
-//Loop för att gå igenom alla indexering av strängen
 for (int i = 0; i < input.Length; i++)
 {
-    searchChar = input[i]; //Vad som ska letas efter
     numberString += input[i];
     
     for (int j = i + 1; j < input.Length; j++)
     {
-        if (!lastPart)  //om den ska fylla på nummer sträng eller sista delen
+        if (!lastPart)  //om den ska fylla på numberString eller sista delen
         {
             numberString += input[j]; 
         }
 
-        else //Här summeras sista delen av strängen. Placeras ovan för att sumeringen ska ske efter nummersträngen är ok
+        else //Här summeras sista delen av strängen. Placeras ovan för att tilläggen ska ske efter nummersträngen är ok
         {
             secondString += input[j];
         }
 
-        if (input[j] == searchChar && lastPart == false) //då har nästa likadana värde hittats, men letar inte efter andra delen
+        if (input[j] == input[i] && lastPart == false) //då har nästa likadana värde hittats, men letar inte efter andra delen
         {            
-            checkConv = long.TryParse(numberString, out sum); //Kör try parse här om det går att konvertera texten.
+            checkConv = long.TryParse(numberString, out sum);
 
             if (checkConv) //om konvertering gick igenom
             {
