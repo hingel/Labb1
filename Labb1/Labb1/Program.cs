@@ -1,5 +1,5 @@
-﻿Console.WriteLine("Enter a string or press enter to use default string:");
-
+﻿//Lab1
+Console.WriteLine("Enter a string or press enter to use default string:");
 string input = Console.ReadLine();
 Console.WriteLine();
 
@@ -52,7 +52,6 @@ for (int i = 0; i < input.Length; i++)
 
     if (checkConv) //Om konvertering blivit lyckad vill vi skriva ut.
     {
-        lastPart = false;
         Console.Write($"{firstString}");
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write($"{numberString}");
@@ -62,6 +61,7 @@ for (int i = 0; i < input.Length; i++)
 
         numberString = string.Empty;
         secondString = string.Empty;
+        lastPart = false;
         checkConv = false;
 
         firstString += input[i]; //Lägga till sist för att inte komma med i utskriften, men ska alltid summeras.
