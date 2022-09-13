@@ -27,7 +27,7 @@ for (int i = 0; i < input.Length; i++)
             numberString += input[j]; 
         }
 
-        else //Här summeras sista delen av strängen. Placeras ovan för att tilläggen ska ske efter nummersträngen är ok
+        else //Här summeras sista delen av strängen. Placeras ovan för att tilläggen ska ske efter nummersträngen är ok och nästa j pos.
         {
             secondString += input[j];
         }
